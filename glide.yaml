@@ -1,0 +1,15 @@
+package: github.com/sniperkit/godownloader
+import:
+- package: github.com/apex/log
+  subpackages:
+  - handlers/cli
+- package: github.com/client9/codegen
+  subpackages:
+  - shell
+- package: github.com/goreleaser/goreleaser
+  subpackages:
+  - config
+  - context
+  - pipeline/defaults
+- package: gopkg.in/alecthomas/kingpin.v2
+- package: gopkg.in/yaml.v2
