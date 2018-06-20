@@ -54,7 +54,7 @@ func LoadTreeConfigReader(fd io.Reader) (config TreeConfig, err error) {
 // https://install.goreleaser.com
 //
 // see the following for performance improvement ideas:
-// https://github.com/goreleaser/godownloader/issues/64
+// https://github.com/sniperkit/godownloader/issues/64
 //
 func treewalk(root string, treeout string, forceWrite bool) error { // nolint: gocyclo
 

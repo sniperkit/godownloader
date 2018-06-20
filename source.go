@@ -8,7 +8,7 @@ import (
 func processSource(source, repo, path, file, exe, nametpl string) (out []byte, err error) {
 	switch source {
 	case "godownloader":
-		// https://github.com/goreleaser/godownloader
+		// https://github.com/sniperkit/godownloader
 		out, err = processGodownloader(repo, path, file)
 	case "equinoxio":
 		// https://equinox.io

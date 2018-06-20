@@ -63,14 +63,14 @@ func makeName(prefix, target string) (string, error) {
 	armversion := "{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}"
 	target = strings.Replace(target, armversion, "{{ .Arch }}", -1)
 
-	// hack for https://github.com/goreleaser/godownloader/issues/70
+	// hack for https://github.com/sniperkit/godownloader/issues/70
 	armversion = "{{ .Arch }}{{ if .Arm }}{{ .Arm }}{{ end }}"
 	target = strings.Replace(target, armversion, "{{ .Arch }}", -1)
 
 	// otherwise if it contains a conditional, we can't (easily)
 	// translate that to bash.  Ask for bug report.
 	if strings.Contains(target, "{{ if") || strings.Contains(target, "{{if") || strings.Contains(target, "{{ .Arm") || strings.Contains(target, "{{.Arm") {
-		return "", fmt.Errorf("name_template %q contains unknown conditional or ARM format.  Please file bug at https://github.com/goreleaser/godownloader", target)
+		return "", fmt.Errorf("name_template %q contains unknown conditional or ARM format.  Please file bug at https://github.com/sniperkit/godownloader", target)
 	}
 
 	varmap := map[string]string{
@@ -94,7 +94,7 @@ func makeName(prefix, target string) (string, error) {
 
 // returns the owner/name repo from input
 //
-// see https://github.com/goreleaser/godownloader/issues/55
+// see https://github.com/sniperkit/godownloader/issues/55
 func normalizeRepo(repo string) string {
 	// handle full or partial URLs
 	repo = strings.TrimPrefix(repo, "https://github.com/")

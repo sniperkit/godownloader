@@ -19,6 +19,6 @@ If you do not use [GoReleaser], additional steps will be required.
 <!-- TODO: document additional steps here -->
 
 [GoReleaser]: https://goreleaser.com
-[GoDownloader]: https://github.com/goreleaser/godownloader
+[GoDownloader]: https://github.com/sniperkit/godownloader
 
 You can see the list of all projects being served [here](/projects).
